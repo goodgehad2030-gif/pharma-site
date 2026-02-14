@@ -2,45 +2,47 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>صيدلية Elite</title>
-<meta name="description" content="قالب صيدلية احترافي لعرض المنتجات والخدمات الطبية مع تصميم عصري متجاوب.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="style.css">
+<title>Elite Pharmacy Store</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header class="hero">
-  <h1>صيدلية Elite</h1>
-  <p>رعايتك الصحية تبدأ من هنا</p>
-  <a href="#products" class="btn">تصفح المنتجات</a>
+<header class="top">
+<h1>💊 صيدلية Elite</h1>
+<input type="text" placeholder="ابحث عن منتج...">
+<div class="cart-icon" onclick="openCart()">🛒 <span id="count">0</span></div>
 </header>
 
-<section id="services">
-<h2>خدماتنا</h2>
-<div class="grid">
-  <div class="card">أدوية أصلية</div>
-  <div class="card">استشارات صيدلانية</div>
-  <div class="card">توصيل سريع</div>
-  <div class="card">عروض وخصومات</div>
+<section class="grid">
+
+<div class="card">
+<img src="https://via.placeholder.com/200">
+<h3>فيتامين C</h3>
+<p>تقوية المناعة</p>
+<span>5$</span>
+<button onclick="addToCart('فيتامين C',5)">إضافة للسلة</button>
+<a class="wa" href="#">واتساب</a>
 </div>
+
+<div class="card">
+<img src="https://via.placeholder.com/200">
+<h3>أوميغا 3</h3>
+<p>صحة القلب</p>
+<span>8$</span>
+<button onclick="addToCart('أوميغا 3',8)">إضافة للسلة</button>
+<a class="wa" href="#">واتساب</a>
+</div>
+
 </section>
 
-<section id="products">
-<h2>منتجات مميزة</h2>
-<div class="grid">
-  <div class="card">فيتامينات</div>
-  <div class="card">مكملات غذائية</div>
-  <div class="card">عناية بالبشرة</div>
-  <div class="card">أجهزة طبية</div>
+<div id="cartBox">
+<h2>سلة المشتريات</h2>
+<ul id="cartItems"></ul>
+<button onclick="checkout()">إتمام الطلب</button>
+<button onclick="closeCart()">إغلاق</button>
 </div>
-</section>
 
-<footer>
-<p>© 2026 صيدلية Elite - جميع الحقوق محفوظة</p>
-</footer>
-
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </body>
-</html>
+  </html>
