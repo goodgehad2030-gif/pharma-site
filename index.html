@@ -3,46 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <title>Elite Pharmacy Store</title>
+
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+body{
+font-family: Arial;
+margin:0;
+background:#f5f7fa;
+}
+
+header{
+background:#0d6efd;
+color:#fff;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+margin:0;
+font-size:22px;
+}
+
+.search-box{
+width:60%;
+padding:8px;
+border:none;
+border-radius:6px;
+}
+
+.cart-icon{
+background:#ffc107;
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
+color:#000;
+font-weight:bold;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+padding:20px;
+}
+
+.card{
+background:#fff;
+border-radius:10px;
+padding:10px;
+box-shadow:0 0 5px rgba(0,0,0,.1);
+text-align:center;
+}
+
+.card img{
+width:100%;
+height:150px;
+object-fit:cover;
+border-radius:8px;
+}
+
+.card h3{
+margin:10px 0 5px;
+}
+
+.price{
+color:green;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.card button{
+background:#0d6efd;
+color:#fff;
+border:none;
+padding:8px;
+width:100%;
+border-radius:6px;
+cursor:pointer;
+}
+
+.card button:hover{
+background:#084298;
+}
+
+footer{
+text-align:center;
+padding:15px;
+background:#222;
+color:#fff;
+}
+</style>
+
 </head>
 
 <body>
 
-<header class="top">
+<header>
 <h1>💊 صيدلية Elite</h1>
-<input type="text" placeholder="ابحث عن منتج...">
-<div class="cart-icon" onclick="openCart()">🛒 <span id="count">0</span></div>
+<input class="search-box" placeholder="ابحث عن منتج...">
+<div class="cart-icon" onclick="openCart()">🛒 السلة</div>
 </header>
 
 <section class="grid">
 
 <div class="card">
-<img src="https://via.placeholder.com/200">
+<img src="https://via.placeholder.com/300">
 <h3>فيتامين C</h3>
-<p>تقوية المناعة</p>
-<span>5$</span>
-<button onclick="addToCart('فيتامين C',5)">إضافة للسلة</button>
-<a class="wa" href="#">واتساب</a>
+<div class="price">15$</div>
+<button onclick="addToCart('فيتامين C',15)">أضف للسلة</button>
 </div>
 
 <div class="card">
-<img src="https://via.placeholder.com/200">
-<h3>أوميغا 3</h3>
-<p>صحة القلب</p>
-<span>8$</span>
-<button onclick="addToCart('أوميغا 3',8)">إضافة للسلة</button>
-<a class="wa" href="#">واتساب</a>
+<img src="https://via.placeholder.com/300">
+<h3>مسكن آلام</h3>
+<div class="price">10$</div>
+<button onclick="addToCart('مسكن آلام',10)">أضف للسلة</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/300">
+<h3>مكمل غذائي</h3>
+<div class="price">20$</div>
+<button onclick="addToCart('مكمل غذائي',20)">أضف للسلة</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/300">
+<h3>جهاز قياس ضغط</h3>
+<div class="price">45$</div>
+<button onclick="addToCart('جهاز قياس ضغط',45)">أضف للسلة</button>
 </div>
 
 </section>
 
-<div id="cartBox">
-<h2>سلة المشتريات</h2>
-<ul id="cartItems"></ul>
-<button onclick="checkout()">إتمام الطلب</button>
-<button onclick="closeCart()">إغلاق</button>
-</div>
+<footer>
+جميع الحقوق محفوظة © Elite Pharmacy 2026
+</footer>
 
 <script src="js/main.js"></script>
+
 </body>
   </html>
